@@ -1,0 +1,33 @@
+.dj-details {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .dj-photo-large {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: #3b3e75;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  .btn-success {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: #3b3e75;
+    color: #fff;
+  }
+  

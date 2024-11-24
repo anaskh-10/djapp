@@ -1,0 +1,92 @@
+/* General container styling */
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styling */
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #495057;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input field styling */
+input.form-control,
+textarea.form-control {
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ced4da;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+/* Focus effect */
+input.form-control:focus,
+textarea.form-control:focus {
+  border-color: #80bdff;
+  outline: none;
+}
+
+/* Label styling */
+label.form-label {
+  font-weight: bold;
+  color: #495057;
+  margin-bottom: 8px;
+}
+
+/* Error message styling */
+.text-danger {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Button styling */
+button.btn {
+  background-color: #31345f;
+  color: white;
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.btn:disabled {
+  background-color: #31345f;
+  cursor: not-allowed;
+}
+
+button.btn:hover {
+  background-color: #218838;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .container {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  button.btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+}

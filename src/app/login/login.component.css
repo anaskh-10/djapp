@@ -1,0 +1,76 @@
+/* General Styles for the Login Page */
+.login-div {
+  max-width: 400px; /* Centered card width */
+  margin: 50px auto; /* Center the card on the page */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  background-color: #ffffff; /* White background */
+  font-family: 'Arial', sans-serif; /* Modern font */
+}
+
+/* Labels for Inputs */
+.form-label {
+  font-weight: bold;
+  color: #3b3e75; /* Match theme color */
+}
+
+/* Input Fields */
+.form-control {
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px; /* Rounded inputs */
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.form-control:focus {
+  border-color: #3b3e75; /* Highlight color on focus */
+  box-shadow: 0 0 5px rgba(59, 62, 117, 0.5); /* Subtle glow */
+}
+
+/* Buttons */
+.btn-success {
+  background-color: #3b3e75; /* Custom green color */
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-left: 33%;
+}
+
+.btn-success:hover {
+  background-color: #31345f; /* Darker green on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  
+}
+
+.btn-primary,.btn-info {
+  background-color: rgb(77, 86, 149); /* Unified button colors */
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin-right: 10px;
+  color: #ffffff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover,.btn-info:hover {
+  background-color: #62688a; /* Lighter hover effect */
+  transform: scale(1.05);
+}
+
+/* Error Messages */
+.text-danger {
+  font-size: 0.9rem;
+  color: #ff6b6b; /* Red for error messages */
+  margin-top: 5px;
+}
+
+/* Margin for Sign-Up Buttons */
+.mt-3 {
+  margin-top: 40px;
+  text-align: center; /* Center align sign-up buttons */
+}

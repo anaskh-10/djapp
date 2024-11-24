@@ -1,0 +1,68 @@
+/* Container for layout */
+.container {
+  display: flex; /* Flexbox layout */
+  justify-content: space-between; /* Space between left and right sections */
+  align-items: flex-start; /* Align items at the top */
+  height: 100vh; /* Take the full height of the viewport */
+  gap: 20px; /* Space between the two sections */
+  padding: 20px; /* Optional: Adds padding around the container */
+  box-sizing: border-box; /* Ensure padding is included in width/height */
+}
+
+/* Left Section (Paragraph) */
+.hero-section {
+  flex: 1; /* Take proportional space */
+  background: linear-gradient(135deg, #3b3e75, #8f94fb); /* Gradient background */
+  padding: 40px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow */
+  height: 40%; /* Stretch to match full container height */
+  display: flex; /* Flexbox for text alignment */
+  align-items: center; /* Vertically center the text */
+  margin-top: 150px;
+  margin-left: -50px;
+}
+
+.highlight-text {
+  font-size: 1.5rem;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+/* Right Section (DJ Cards) */
+.dj-list {
+  display: flex; /* Layout for the cards */
+  flex-wrap: wrap; /* Allow wrapping if cards overflow */
+  gap: 20px; /* Space between cards */
+  justify-content: flex-start; /* Align items to the left */
+  flex: 1; /* Take more space than the hero section */
+  height: 100%; /* Stretch to match full container height */
+  overflow-y: auto; /* Scroll if content overflows */
+  padding: 20px;
+  box-sizing: border-box; /* Include padding in width/height */
+  margin-right: -100px;
+}
+
+.dj-card {
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.dj-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.dj-card h3 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.dj-card p {
+  font-size: 0.9rem;
+  color: #555;
+}

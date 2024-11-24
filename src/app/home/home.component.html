@@ -1,0 +1,18 @@
+<div class="container">
+  <!-- Left Section: Hero Section -->
+  <div class="hero-section">
+    <p class="highlight-text">
+      Bienvenue sur notre plateforme de réservation de DJs ! Réservez facilement des artistes talentueux pour rendre vos événements inoubliables.
+    </p>
+  </div>
+
+  <!-- Right Section: DJ List -->
+  <div class="dj-list">
+    <div *ngFor="let dj of djs" class="dj-card" (click)="viewDjProfile(dj.id)">
+      <img [src]="'assets/images/'+dj.photoUrl" alt="{{ dj.name }}">
+      <h3>{{ dj.name }}</h3>
+      <p>{{ dj.description }}</p>
+      <p>{{ dj.rating }}</p>
+    </div>
+  </div>
+</div>

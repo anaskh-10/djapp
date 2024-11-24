@@ -1,0 +1,75 @@
+<div class="container">
+    <h2>Client Sign Up</h2>
+    <form (ngSubmit)="onSubmit()" #clientForm="ngForm">
+        <!-- Name Field -->
+    <div class="mb-3">
+      <label for="name" class="form-label">Full Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        required
+        [(ngModel)]="clientData.name"
+        name="name"
+        #name="ngModel"
+      />
+      <div *ngIf="name.invalid && name.touched" class="text-danger">
+        Name is required.
+      </div>
+    </div>
+        <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          required
+          [(ngModel)]="clientData.email"
+          name="email"
+          #email="ngModel"
+        />
+        <div *ngIf="email.invalid && email.touched" class="text-danger">
+          Email is required.
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          required
+          [(ngModel)]="clientData.password"
+          name="password"
+          #password="ngModel"
+        />
+        <div *ngIf="password.invalid && password.touched" class="text-danger">
+          Password is required.
+        </div>
+      </div>
+  
+      <!-- Confirm Password -->
+      <div class="mb-3">
+        <label for="confirmPassword" class="form-label">Confirm Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="confirmPassword"
+          required
+          [(ngModel)]="clientData.confirmPassword"
+          name="confirmPassword"
+          #confirmPassword="ngModel"
+        />
+        <div *ngIf="confirmPassword.invalid && confirmPassword.touched" class="text-danger">
+          Confirm Password is required.
+        </div>
+        <div *ngIf="clientData.password !== clientData.confirmPassword && confirmPassword.touched" class="text-danger">
+          Passwords do not match.
+        </div>
+      </div>
+  
+      <button type="submit" class="btn btn-success" [disabled]="clientForm.invalid">Sign Up</button>
+    </form>
+  </div>
+  

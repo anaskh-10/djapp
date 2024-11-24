@@ -1,0 +1,24 @@
+<div class="dj-details">
+    <img [src]="dj.photoUrl" [alt]="dj.name" class="dj-photo-large" />
+    <h2>{{ dj.name }}</h2>
+    <p><strong>Rating:</strong> {{ dj.rating }}</p>
+    <p><strong>Description:</strong> {{ dj.description }}</p>
+    
+    <p><strong>Bio:</strong> {{ dj.bio }}</p>
+    <!-- Display Music Styles -->
+    <p><strong>Music Styles:</strong> 
+      <span *ngFor="let style of dj.musicStyles; let last = last">
+        {{ style }}<span *ngIf="!last">, </span>
+      </span>
+    </p>
+    
+    <!-- Display Media Items -->
+    <p><strong>Media Items:</strong>
+      <span *ngFor="let media of dj.mediaItems; let last = last">
+        {{ media }}<span *ngIf="!last">, </span>
+      </span>
+    </p>
+    
+    <button class="btn btn-success" (click)="bookDj(dj.id)">Book Now</button>
+  </div>
+  

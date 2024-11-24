@@ -1,0 +1,14 @@
+<div class="dj-list">
+    <div *ngFor="let dj of djs" class="dj-card">
+      <img
+        [src]="dj.photoUrl"
+        [alt]="dj.name"
+        (click)="viewDjPage(dj.id)"
+        class="dj-photo"
+      />
+      <h3>{{ dj.name }}</h3>
+      <p>Rating: {{ dj.rating }}/10</p>
+      <button class="btn btn-primary" (click)="viewDjPage(dj.id)">Book</button>
+    </div>
+  </div>
+  

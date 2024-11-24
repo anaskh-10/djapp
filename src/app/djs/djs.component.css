@@ -1,0 +1,36 @@
+.dj-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .dj-card {
+    width: 250px;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .dj-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .dj-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .btn {
+    margin-top: 10px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+  

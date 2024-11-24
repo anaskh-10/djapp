@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #3b3e75;">
+
+  <div class="container-fluid">
+    <a class="navbar-brand" href="">ResDJ</a>
+    <button class="navbar-toggler" type="button" data-bs- toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-
+      controls="navbarNavAltMarkup" aria-expanded="false" aria- label="Toggle navigation">
+
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="home">Home</a>
+        <a class="nav-link" href="djs">Djs</a>
+        <a class="nav-link" href="bookings">Bookings</a>
+      </div>
+    </div>
+
+    <!-- Right Button for Login -->
+    <div class="d-flex align-items-center">
+      <button type="button" class="btn btn-success px-3 me-2$" data-bs-toggle="modal" data-bs-target="#myModal"
+        style="background-color: #3b3e75;" (click)="openLoginModal()">
+        Login
+      </button>
+    </div>
+    <div *ngIf="showLoginModal" class="modal fade show d-block" style="background-color: rgba(0,0,0,0.5);">
+      <app-login (close)="closeLoginModal()"></app-login>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>

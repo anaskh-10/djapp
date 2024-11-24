@@ -1,0 +1,123 @@
+<div class="container">
+    <h2>DJ Sign Up</h2>
+    <form (ngSubmit)="onSubmit()" #djForm="ngForm">
+      <!-- Name Field -->
+    <div class="mb-3">
+      <label for="name" class="form-label">Full Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        required
+        [(ngModel)]="djData.name"
+        name="name"
+        #name="ngModel"
+      />
+      <div *ngIf="name.invalid && name.touched" class="text-danger">
+        Name is required.
+      </div>
+    </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          required
+          [(ngModel)]="djData.email"
+          name="email"
+          #email="ngModel"
+        />
+        <div *ngIf="email.invalid && email.touched" class="text-danger">
+          Email is required.
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          required
+          [(ngModel)]="djData.password"
+          name="password"
+          #password="ngModel"
+        />
+        <div *ngIf="password.invalid && password.touched" class="text-danger">
+          Password is required.
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="genre" class="form-label">DJ Genre</label>
+        <input
+          type="text"
+          class="form-control"
+          id="genre"
+          required
+          [(ngModel)]="djData.genre"
+          name="genre"
+          #genre="ngModel"
+        />
+        <div *ngIf="genre.invalid && genre.touched" class="text-danger">
+          Genre is required.
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="bio" class="form-label">Bio</label>
+        <textarea
+          class="form-control"
+          id="bio"
+          required
+          [(ngModel)]="djData.bio"
+          name="bio"
+          #bio="ngModel"
+        ></textarea>
+        <div *ngIf="bio.invalid && bio.touched" class="text-danger">
+          Bio is required.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="musicStyles" class="form-label">Music Styles</label>
+        <select
+          class="form-control"
+          id="musicStyles"
+          multiple
+          required
+          [(ngModel)]="djData.musicStyles"
+          name="musicStyles"
+          #musicStyles="ngModel"
+        >
+          <option value="House">House</option>
+          <option value="Techno">Techno</option>
+          <option value="Trance">Trance</option>
+          <option value="Drum and Bass">Drum and Bass</option>
+          <option value="Dubstep">Dubstep</option>
+          <option value="Hip Hop">Hip Hop</option>
+        </select>
+        <div *ngIf="musicStyles.invalid && musicStyles.touched" class="text-danger">
+          Please select at least one music style.
+        </div>
+      </div>
+        <!-- Media Items Field (for URLs or File Uploads) -->
+    <div class="mb-3">
+      <label for="mediaItems" class="form-label">Media Items (URLs or Files)</label>
+      <input
+        type="file"
+        class="form-control"
+        id="mediaItems"
+        [(ngModel)]="djData.mediaItems"
+        name="mediaItems"
+        #mediaItems="ngModel"
+        multiple
+      />
+      <div *ngIf="mediaItems.invalid && mediaItems.touched" class="text-danger">
+        Media items are required.
+      </div>
+    </div>
+      <button type="submit" class="btn btn-success" [disabled]="djForm.invalid">Sign Up </button>
+    </form>
+  </div>
+  
